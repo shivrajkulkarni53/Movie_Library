@@ -12,7 +12,10 @@ const port = process.env.PORT || 3001;
 n.setServers(["1.1.1.1", "8.8.8.8"]);
 
 
-app.use(cors());
+app.use(cors(
+    {
+        // origin:`http://localhost:5173`
+    }
 
 app.use(express.json());
 app.use("/movie", MovieRoutes);
